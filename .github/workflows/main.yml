@@ -19,9 +19,8 @@ jobs:
           - '3.1.0'
     services:
       postgres:
-        image: postgres:10.10
+        image: postgres:latest
         env:
-          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
         ports:
@@ -37,4 +36,4 @@ jobs:
     - name: Run the default task
       run: bundle exec rake
       env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+        DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
