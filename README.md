@@ -35,7 +35,7 @@ By default, the cache table will be created with the name `activesupport_cache_s
 To use the PostgreSQL cache store in your Rails application, you can configure it in your config/application.rb file:
 
 ```ruby
-config.cache_store = :activesupport_postgres_cache_store,
+config.cache_store = :postgres_store,
                      expires_in: 1.hour
 ```
 
@@ -44,7 +44,7 @@ This will configure the cache store to use a PostgreSQL table called `activesupp
 Alternatively, you can configure the cache store in an initializer file, such as config/initializers/cache_store.rb:
 
 ```ruby
-Rails.application.config.cache_store = :postgresql_cache_store,
+Rails.application.config.cache_store = :postgres_store,
                                        expires_in: 1.hour
 ```
 

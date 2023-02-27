@@ -24,7 +24,7 @@ class ActiveSupportPostgresCacheStoreTest < ActiveSupport::TestCase
   def setup
     setup_database
 
-    @cache_store = ActiveSupport::Cache::PostgresqlStore.new(
+    @cache_store = ActiveSupport::Cache::PostgresStore.new(
       table_name: "activesupport_cache_store_test"
     )
     @cache_store.clear

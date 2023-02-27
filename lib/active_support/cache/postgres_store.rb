@@ -8,7 +8,7 @@ module ActiveSupport
     ##
     # Implements an ActiveSupport::Cache::Store which reads and writes data into a Postgres table
     # This allows for a simple cache store using your existing data store.
-    class PostgresqlStore < Store
+    class PostgresStore < Store
       # Advertise cache versioning support.
       def self.supports_cache_versioning?
         true
