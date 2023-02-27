@@ -1,0 +1,13 @@
+##
+# This migration was created by 'rails generate activesupport_postgres_cache_store:migration'
+class Create<%= table_name.camelize %>Table < ActiveRecord::Migration[6.1]
+  def change
+    create_table :<%= table_name %>, timestamps: false, id: false do |t|
+      t.text :key, null: false, index: { unique: true }
+      t.datetime :expires_at, index: true
+      t.binary :value, null: false
+
+      t.timestamps
+    end
+  end
+end
